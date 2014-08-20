@@ -1,6 +1,8 @@
 set sta
 
+
 colors desert
+colors github 
 set gfn=Courier_New:h12:cANSI
 set gfn=Lucida_Sans_Typewriter:h11:cANSI
 set gfn=Lucida_Sans_Typewriter_Regular:h13
