@@ -33,3 +33,5 @@ nnoremap <F10> :set hls<CR>:exec "let @/='\\<".expand("<cword>")."\\>'"<CR>
 nnoremap <F11> :nohls<CR>
 
 abbr cons console.log
+
+let jshint2_save = 1
