@@ -40,3 +40,6 @@
 [submodule "bundle/vim-localvimrc"]
 	path = bundle/vim-localvimrc
 	url = https://github.com/embear/vim-localvimrc.git
+[submodule "bundle/dustjs"]
+	path = bundle/dustjs
+	url = git://github.com/jimmyhchan/dustjs.vim.git

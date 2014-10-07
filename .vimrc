@@ -23,6 +23,7 @@ set scrolloff=5
 set shiftwidth=4
 set sta
 set tabstop=4
+set backupdir=~/tmp
 
 filetype plugin on
 syntax on
