@@ -35,7 +35,7 @@ abbreviate jash jash.print
 
 " Mappings
 map <F2> :!xmllint --valid --noout %<CR>
-nnoremap <F3> :CommandT<CR>
+nnoremap <F3> :CtrlP<CR>
 " <F4> used by qbuf
 inoremap <F5> <C-R>=strftime("%m/%d/%Y - ")<CR>
 inoremap <F6> <C-R>=strftime("%m/%d/%Y - %T - ")<CR>
@@ -43,11 +43,21 @@ map <F7> :NERDTreeToggle<CR>
 nnoremap <F10> :set hls<CR>:exec "let @/='\\<".expand("<cword>")."\\>'"<CR>
 nnoremap <F11> :nohls<CR>
 
+"" Plugin configurations
+
+" SnipMate
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {} 
 let g:snipMate.scope_aliases['jsp'] = 'jsp, html'
 
+" JSHint
 let jshint2_save = 1
 
+" localvimrc
 let g:localvimrc_whitelist='/\(Users\|home\)/jshalvi/.lvimrc'
 let g:localvimrc_sandbox=0
+
+" CtrlP
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '(bower_components|POS|node_module|build|bin|config)'
+    \ }
