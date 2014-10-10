@@ -8,6 +8,7 @@ autocmd BufRead *.mxml set tabstop=4
 autocmd BufRead *.mxml set filetype=mxml
 autocmd BufRead *.as set filetype=actionscript
 autocmd BufRead *.js set shiftwidth=4
+autocmd BufRead *.json set syntax=javascript
 
 " Disable auto-commenting
 au FileType * setl fo-=cro
@@ -40,6 +41,7 @@ nnoremap <F3> :CtrlP<CR>
 inoremap <F5> <C-R>=strftime("%m/%d/%Y - ")<CR>
 inoremap <F6> <C-R>=strftime("%m/%d/%Y - %T - ")<CR>
 map <F7> :NERDTreeToggle<CR>
+nnoremap <F8> :CtrlP src/main/webapp<CR>
 nnoremap <F10> :set hls<CR>:exec "let @/='\\<".expand("<cword>")."\\>'"<CR>
 nnoremap <F11> :nohls<CR>
 

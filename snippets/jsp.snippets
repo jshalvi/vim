@@ -1,0 +1,52 @@
+snippet datacontext
+	<util:dataContext name="${1}" var="${2:dataContextAttr}" />
+
+snippet choose
+	<c:choose>
+		<c:when test="${1}">
+			${2}
+		</c:when>
+		<c:otherwise>
+			${3}
+		</c:otherwise>
+	</c:choose>
+
+snippet jsonagent
+	<json:agent type="${1}" var="${2}" />
+
+snippet jsonescape
+	<json:escape>${1}</json:escape>
+snippet renderinclude
+	<render:include src="${1}" />
+
+snippet renderincludeparams
+	<render:include src="${1}">
+		<render:attribute name="${2}" value="${3}" />${4}
+	</render:include>
+
+snippet renderattribute
+	<render:attribute name="${1}" value="${2}" />${3}
+
+snippet formatsystext
+	<format:sysText key="${1}" />${2}
+
+snippet //
+	<%-- ${1} --%>
+
+snippet urllinkaddparam
+	<url:linkAddParam name="${1}" value="${2}"/>${3}
+
+snippet cdialog
+	<control:dialog id="${1}" linkText="${2}" agent="${3}">
+		${4}
+	</control:dialog>
+
+snippet formatdescription
+	<format:description value="${1}" />
+
+snippet formatdescriptionvar
+	<format:description value="${1}" var="${2}" />
+
+snippet csetbody
+	<c:set var="${1}">
+	</c:set>
