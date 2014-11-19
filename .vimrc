@@ -9,6 +9,7 @@ autocmd BufRead *.mxml set filetype=mxml
 autocmd BufRead *.as set filetype=actionscript
 autocmd BufRead *.js set shiftwidth=4
 autocmd BufRead *.json set syntax=javascript
+autocmd BufRead *.gradle set syntax=groovy
 
 " Disable auto-commenting
 au FileType * setl fo-=cro
@@ -63,3 +64,20 @@ let g:localvimrc_sandbox=0
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '(bower_components|POS|node_module|build|bin|config)'
     \ }
+
+func! WordProcessorMode() 
+  setlocal formatoptions=1 
+  setlocal noexpandtab 
+  map j gj 
+  map k gk
+  setlocal spell spelllang=en_us 
+  set thesaurus+=/Users/sbrown/.vim/thesaurus/mthesaur.txt
+  set complete+=s
+  set formatprg=par
+  setlocal wrap 
+  setlocal linebreak 
+  color solarized
+endfu 
+com! WP call WordProcessorMode()
+
+set backupdir=~/tmp,.,~/
