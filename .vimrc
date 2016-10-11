@@ -34,6 +34,7 @@ syntax enable
 abbreviate jq jQuery
 abbreviate cons console.log
 abbreviate jash jash.print
+abbreviate rc RentCheck: 
 
 " Mappings
 map <F2> :!xmllint --valid --noout %<CR>
@@ -42,7 +43,7 @@ nnoremap <F3> :CtrlP<CR>
 inoremap <F5> <C-R>=strftime("%m/%d/%Y - ")<CR>
 inoremap <F6> <C-R>=strftime("%m/%d/%Y - %T - ")<CR>
 map <F7> :NERDTreeToggle<CR>
-nnoremap <F8> :CtrlP src/main/webapp<CR>
+nnoremap <F8> :CtrlP .<CR>
 nnoremap <F10> :set hls<CR>:exec "let @/='\\<".expand("<cword>")."\\>'"<CR>
 nnoremap <F11> :nohls<CR>
 
