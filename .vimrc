@@ -77,7 +77,6 @@ func! WordProcessorMode()
   set formatprg=par
   setlocal wrap 
   setlocal linebreak 
-  color solarized
 endfu 
 com! WP call WordProcessorMode()
 
