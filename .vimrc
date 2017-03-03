@@ -11,6 +11,10 @@ autocmd BufRead *.js set shiftwidth=4
 autocmd BufRead *.json set syntax=javascript
 autocmd BufRead *.gradle set syntax=groovy
 
+au FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
+
+set directory=$HOME/.vim/swapfiles//
+
 " Disable auto-commenting
 au FileType * setl fo-=cro
 
@@ -34,7 +38,6 @@ syntax enable
 abbreviate jq jQuery
 abbreviate cons console.log
 abbreviate jash jash.print
-abbreviate rc RentCheck: 
 
 " Mappings
 map <F2> :!xmllint --valid --noout %<CR>
@@ -81,3 +84,5 @@ endfu
 com! WP call WordProcessorMode()
 
 set backupdir=~/tmp,.,~/
+
+let g:vim_markdown_folding_disabled = 1

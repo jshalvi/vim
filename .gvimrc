@@ -1,5 +1,7 @@
 set sta
 
+" colors github
+" colors solarized
 colors darcula
 set gfn=Courier_New:h12:cANSI
 set gfn=Lucida_Sans_Typewriter:h11:cANSI
