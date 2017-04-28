@@ -1,17 +1,7 @@
 execute pathogen#infect()
 call pathogen#helptags()
 
-filetype plugin on
-
-" Source-specific settings
-autocmd BufRead *.mxml set tabstop=4
-autocmd BufRead *.mxml set filetype=mxml
-autocmd BufRead *.as set filetype=actionscript
-autocmd BufRead *.js set shiftwidth=4
-autocmd BufRead *.json set syntax=javascript
-autocmd BufRead *.gradle set syntax=groovy
-
-au FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
+" au FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
 
 set directory=$HOME/.vim/swapfiles//
 
@@ -30,9 +20,6 @@ set shiftwidth=4
 set sta
 set tabstop=4
 set backupdir=~/tmp
-
-filetype plugin on
-syntax on
 syntax enable
 
 abbreviate jq jQuery
@@ -65,24 +52,7 @@ let g:localvimrc_whitelist='/\(Users\|home\)/jshalvi/.lvimrc'
 let g:localvimrc_sandbox=0
 
 " CtrlP
-let g:ctrlp_custom_ignore = {
-    \ 'dir':  '(bower_components|POS|node_module|build|bin|config)'
-    \ }
+let g:ctrlp_custom_ignore = 'bower_components\|node_modules\|build\|bin\|config'
 
-func! WordProcessorMode() 
-  setlocal formatoptions=1 
-  setlocal noexpandtab 
-  map j gj 
-  map k gk
-  setlocal spell spelllang=en_us 
-  set thesaurus+=/Users/sbrown/.vim/thesaurus/mthesaur.txt
-  set complete+=s
-  set formatprg=par
-  setlocal wrap 
-  setlocal linebreak 
-endfu 
-com! WP call WordProcessorMode()
-
-set backupdir=~/tmp,.,~/
-
+" Markdown
 let g:vim_markdown_folding_disabled = 1
