@@ -1,3 +1,7 @@
+"" Disable plugins as needed
+let g:pathogen_disabled = []
+" call add(g:pathogen_disabled, 'Align')
+
 execute pathogen#infect()
 call pathogen#helptags()
 
