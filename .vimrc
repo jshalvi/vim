@@ -26,15 +26,26 @@ abbreviate jq jQuery
 abbreviate cons console.log
 abbreviate jash jash.print
 
-" Mappings
+"" F Key Mappings
+
+" <F2>
 map <F2> :!xmllint --valid --noout %<CR>
+" <F3>
 nnoremap <F3> :CtrlP<CR>
-" <F4> used by qbuf
+" <F4>
+" used by qbuf
+" <F5>
 inoremap <F5> <C-R>=strftime("%m/%d/%Y - ")<CR>
+" <F6>
 inoremap <F6> <C-R>=strftime("%m/%d/%Y - %T - ")<CR>
+" <F7>
 map <F7> :NERDTreeToggle<CR>
+" <F8>
 nnoremap <F8> :CtrlP .<CR>
+" <F9>
+" <F10>
 nnoremap <F10> :set hls<CR>:exec "let @/='\\<".expand("<cword>")."\\>'"<CR>
+" <F11>
 nnoremap <F11> :nohls<CR>
 
 "" Plugin configurations
@@ -52,7 +63,10 @@ let g:localvimrc_whitelist='/\(Users\|home\)/jshalvi/.lvimrc'
 let g:localvimrc_sandbox=0
 
 " CtrlP
-let g:ctrlp_custom_ignore = 'bower_components\|node_modules\|build\|bin\|config'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|node_modules\|log\|target\|tmp$',
+  \ 'file': '\v\.(jar|iml|iws|ipr|gz|exe|so|dll)$'
+  \ }
 
 " Markdown
 let g:vim_markdown_folding_disabled = 1
