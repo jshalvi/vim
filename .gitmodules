@@ -37,9 +37,6 @@
 [submodule "bundle/dustjs"]
 	path = bundle/dustjs
 	url = git://github.com/jimmyhchan/dustjs.vim.git
-[submodule "bundle/ctrlp"]
-	path = bundle/ctrlp
-	url = https://github.com/kien/ctrlp.vim.git
 [submodule "bundle/mustache"]
 	path = bundle/mustache
 	url = git://github.com/mustache/vim-mode.git
