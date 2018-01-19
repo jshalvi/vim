@@ -55,3 +55,6 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "bundle/vim-jira-open"]
+	path = bundle/vim-jira-open
+	url = https://github.com/markabe/vim-jira-open

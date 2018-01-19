@@ -51,6 +51,8 @@ nnoremap <F8> :CtrlP .<CR>
 nnoremap <F10> :set hls<CR>:exec "let @/='\\<".expand("<cword>")."\\>'"<CR>
 " <F11>
 nnoremap <F11> :nohls<CR>
+" <F12>
+map <F12> :call JiraOpen()<cr><cr>
 
 "" Plugin configurations
 
@@ -74,3 +76,6 @@ let g:ctrlp_custom_ignore = {
 
 " Markdown
 let g:vim_markdown_folding_disabled = 1
+
+" Vim Jira Open
+let g:jira_browse_url = 'https://jira.mlbam.com/browse/'
